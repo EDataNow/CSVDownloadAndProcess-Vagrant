@@ -79,19 +79,22 @@ Vagrant.configure("2") do |config|
     curl -L get.rvm.io | bash -s stable
     source /etc/profile.d/rvm.sh
     rvm install ruby-2.3.0
-    cd /vagrant
-    git init
-    git remote add origin "https://#{@config.git_username}:#{@config.git_password}@github.com/EDataNow/CSVDownloadAndProcess-Ruby.git"
-    git pull origin master
     gem install bundler
-
   SHELL
-  config.vm.provision "shell", privileged: false, inline: <<-SHELL
-    cd /vagrant
-    bundle install
-  SHELL
+    if @config.git_username && @config.git_password
+    config.vm.provision "shell", inline: <<-SHELL
+      cd /vagrant
+      git init
+      git remote add origin "https://#{@config.git_username}:#{@config.git_password}@github.com/EDataNow/CSVDownloadAndProcess-Ruby.git"
+      git pull origin master
+    SHELL
+    config.vm.provision "shell", privileged: false, inline: <<-SHELL
+      cd /vagrant
+      bundle install
+    SHELL
+  end
 
-  config.vm.provision "shell", path: './provisioning/bootstrap.sh', privileged: false, args: "/vagrant/#{@config.script}"
+  config.vm.provision "shell", path: './provisioning/bootstrap.sh', privileged: false, args: "/vagrant/DaPr.rb"
 
 
 end
