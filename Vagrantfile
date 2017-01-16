@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision "shell", path: './provisioning/postgresql.sh', args: @config.user_name, @config.language
+  config.vm.provision "shell", path: './provisioning/postgresql.sh', args: [@config.user_name, @config.language]
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
 
@@ -87,7 +87,7 @@ Vagrant.configure("2") do |config|
       git clone "https://#{@config.git_username}:#{@config.git_password}@github.com/EDataNow/CSVDownloadAndProcess-Ruby.git"
     SHELL
     config.vm.provision "shell", privileged: false, inline: <<-SHELL
-      cd /vagrant
+      cd /vagrant/CSVDownloadAndProcess-Ruby
       bundle install
     SHELL
   end
