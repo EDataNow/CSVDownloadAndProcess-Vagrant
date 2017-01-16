@@ -1,5 +1,6 @@
 *.csv
 /csv/
+/.vagrant/
 
 #####
 *.gem
