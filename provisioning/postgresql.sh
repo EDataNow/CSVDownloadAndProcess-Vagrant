@@ -3,7 +3,7 @@ APP_DB_USER=vagrant
 APP_DB_PASS=vagrant
 
 # Edit the following to change the name of the database that is created (defaults to the user name)
-APP_DB_NAME=edn_summaries
+APP_DB_NAME="$1-edn_summaries"
 
 # Edit the following to change the version of PostgreSQL that is installed
 PG_VERSION=9.6
