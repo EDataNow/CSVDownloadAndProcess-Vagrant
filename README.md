@@ -12,7 +12,7 @@ Once both of the above have been installed, a .csv file must be created containi
 
 The headers for the .csv are as follows:
 
-> User Name,Access Key Id,Secret Access Key,Region,Server,Language,Script,Processor,Git Username,Git Password
+> User Name,Access Key Id,Secret Access Key,Region,Server,Language,Processor
 
 The order of these columns does not matter
 
@@ -26,14 +26,12 @@ The order of these columns does not matter
 
 ####Optional
 - Processor : We have provided a ruby script which will process the .csv summaries into the local database, but if you wish to override this with a custom script, you may do so by including it's path here.
-- Git Username : If Git credentials are provided, they will be used to clone our repository as part of the provisioning process. If left blank, refer to the post-vagrant section below for remaining steps.
-- Git Password : As above
 
 ####Example .csv
 
-| User Name | Access Key Id | Secret Access Key | Region    | Server               | Language | Git Username  | Git Password |
-|-----------|---------------|-------------------|-----------|----------------------|----------|---------------|--------------|
-| 3         | <Key>         | <Secret-Key>      | us-east-1 | service.edatanow.com | en       | ExampleUser99 | password1    |
+| User Name | Access Key Id | Secret Access Key | Region    | Server               | Language | Processor |
+|-----------|---------------|-------------------|-----------|----------------------|----------|-----------|
+| 3         | ABC123        | A1B2C3D4E5F6      | us-east-1 | service.edatanow.com | en       |           |
 
 Once the .csv is saved into the same directory as the Vagrantfile, simply call
 ~~~
@@ -42,18 +40,4 @@ vagrant up
 
 ###Post-Vagrant
 
-If you do not wish to include your git credentials in the .csv, you will have to manually pull our repo using
-~~~
-vagrant ssh
-~~~
-
-Once in the ubuntu virtual machine, do the following
-~~~
-cd /vagrant/
-git clone https://github.com/EDataNow/CSVDownloadAndProcess-Ruby.git
-cd CSVDownloadAndProcess-Ruby/
-bundle install
-~~~
-
-###Upkeep
 If the VirtualBox has stopped ('vagrant halt', machine shut down, or power loss) it can be turned back on with the 'vagrant up' command. No other steps are needed, provided the local data has not been altered.
