@@ -80,10 +80,14 @@ Vagrant.configure("2") do |config|
     source /etc/profile.d/rvm.sh
     rvm install ruby-2.3.0
     gem install bundler
-    cd /vagrant/script
-    bundle install
     SHELL
   end
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
+    cd /vagrant/script
+    git submodule init
+    git submodule update
+    bundle install
+  SHELL
   config.vm.provision "shell", path: './provisioning/bootstrap.sh', privileged: false, args: "/vagrant/script/DaPr.rb"
 
 end
