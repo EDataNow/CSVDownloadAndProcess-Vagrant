@@ -81,7 +81,6 @@ Vagrant.configure("2") do |config|
     rvm install ruby-2.3.0
     gem install bundler
     SHELL
-  end
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
     cd /vagrant/script
     git submodule init

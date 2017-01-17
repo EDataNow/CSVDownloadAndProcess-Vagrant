@@ -8,7 +8,7 @@ Creates a VM that automatically downloads Summaries and pushes the content to po
 
 Alternately, both Vagrant and VirtualBox are available on most package managers such as Homebrew or apt-get
 
-Once both of the above have been installed, a .csv file must be created containing AWS credentials, region and language preferences, and GitHub credentials (optional, but does reduce user action).
+Once both of the above have been installed, a .csv file must be created containing AWS credentials, region, and language preferences.
 
 The headers for the .csv are as follows:
 
