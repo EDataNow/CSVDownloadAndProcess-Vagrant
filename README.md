@@ -5,8 +5,13 @@ Creates a VM that automatically downloads Summaries and pushes the content to po
 
 1. Download Vagrant [here](https://www.vagrantup.com/downloads.html)
 2. Download VirtualBox [here](https://www.virtualbox.org/wiki/Downloads)
+- Alternately, both Vagrant and VirtualBox are available on most package managers such as Homebrew or apt-get
+3. From the vagrant directory, use the following commands to pull the latest version of the ruby script
 
-Alternately, both Vagrant and VirtualBox are available on most package managers such as Homebrew or apt-get
+~~~
+git submodule init
+git submodule update
+~~~
 
 Once both of the above have been installed, a .csv file must be created containing AWS credentials, region, and language preferences.
 
