@@ -10,9 +10,11 @@ Alternately, both Vagrant and VirtualBox are available on most package managers 
 
 Once both of the above have been installed, a .csv file must be created containing AWS credentials, region and language preferences, and GitHub credentials (optional, but does reduce user action).
 
-The headers required are as follows:
+The headers for the .csv are as follows:
 
 > User Name,Access Key Id,Secret Access Key,Region,Server,Language,Script,Processor,Git Username,Git Password
+
+The order of these columns does not matter
 
 ####Required
 - User Name : This is the AWS username, usually an integer matching the Lessee ID on EDataNow
