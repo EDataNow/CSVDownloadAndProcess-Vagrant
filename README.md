@@ -46,3 +46,8 @@ vagrant up
 ###Post-Vagrant
 
 If the VirtualBox has stopped ('vagrant halt', machine shut down, or power loss) it can be turned back on with the 'vagrant up' command. No other steps are needed, provided the local data has not been altered.
+
+If you want to run the retrieval script outside the 30min schedule, the script can be called manually with
+~~~
+ruby /vagrant/script/dapr.rb
+~~~
