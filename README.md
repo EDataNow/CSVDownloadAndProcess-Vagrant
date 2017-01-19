@@ -13,9 +13,9 @@ git submodule init
 git submodule update
 ~~~
 
-Once both of the above have been installed, a .csv file must be created containing AWS credentials, region, and language preferences.
+Once both of the above have been installed, a config.csv file must be created containing AWS credentials, region, and language preferences.
 
-The headers for the .csv are as follows:
+The headers for the config.csv are as follows:
 
 > User Name,Access Key Id,Secret Access Key,Region,Server,Language,Processor
 
@@ -32,13 +32,13 @@ The order of these columns does not matter
 ####Optional
 - Processor : We have provided a ruby script which will process the .csv summaries into the local database, but if you wish to override this with a custom script, you may do so by including it's path here.
 
-####Example .csv
+####Example config.csv
 
 | User Name | Access Key Id | Secret Access Key | Region    | Server               | Language | Processor |
 |-----------|---------------|-------------------|-----------|----------------------|----------|-----------|
 | 3         | ABC123        | A1B2C3D4E5F6      | us-east-1 | service.edatanow.com | en       |           |
 
-Once the .csv is saved into the same directory as the Vagrantfile, simply call
+Once the config.csv is saved into the same directory as the Vagrantfile, simply call
 ~~~
 vagrant up
 ~~~
