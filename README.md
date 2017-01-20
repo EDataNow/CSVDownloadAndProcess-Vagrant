@@ -49,5 +49,6 @@ If the VirtualBox has stopped ('vagrant halt', machine shut down, or power loss)
 
 If you want to run the retrieval script outside the 30min schedule, the script can be called manually with
 ~~~
+vagrant ssh
 ruby /vagrant/script/dapr.rb
 ~~~
