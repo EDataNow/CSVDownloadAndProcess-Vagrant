@@ -84,10 +84,11 @@ Vagrant.configure("2") do |config|
     cd /vagrant/script
     bundle install
     SHELL
+  config.vm.provision "shell", path: './provisioning/bootstrap.sh', privileged: false, args: "/vagrant/script/DaPr.rb"
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
     cd /vagrant/script
     ruby DaPr.rb
   SHELL
-  config.vm.provision "shell", path: './provisioning/bootstrap.sh', privileged: false, args: "/vagrant/script/DaPr.rb"
+  
 
 end

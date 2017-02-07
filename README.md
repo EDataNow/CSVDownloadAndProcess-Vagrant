@@ -53,4 +53,4 @@ vagrant ssh
 ruby /vagrant/script/dapr.rb
 ~~~
 
-To connect to the database using Excel/PowerBI/etc from a Windows machine, you will need the [NPGSQL driver](https://github.com/npgsql/Npgsql/releases). Download the latest .msi and run it. 
+To connect to the database using Excel/PowerBI/etc from a Windows machine, you will need the [psqlODBC driver](https://www.postgresql.org/ftp/odbc/versions/msi/). 
