@@ -48,13 +48,13 @@ A config.csv file must be provided containing AWS credentials, region, and langu
 > - Language : You can see a list of ISO 639-1 language codes here: https://www.loc.gov/standards/iso639-2/php/code_list.php. English is en
 
 > ####Optional
-> - Processor : We have provided a ruby script which will process the .csv summaries into the local database, but if you wish to override this with a custom script, you may do so by including it's name here. The default script, example.rb, only prints out the filenames and moves them to the Processed folder.
+> - Processor : We have provided a ruby script which will process the .csv summaries into the local database, but if you wish to override this with a custom script, you may do so by including it's path here. The default script, example.rb, only prints out the filenames and moves them to the Processed folder.
 
 > ####Example config.csv
 
-> | User Name | Access Key Id | Secret Access Key | Region    | Server               | Language | Processor   |
-> |-----------|---------------|-------------------|-----------|----------------------|----------|-------------|
-> | 3         | ABC123        | A1B2C3D4E5F6      | us-east-1 | service.edatanow.com | en       | db_store.rb |
+> | User Name | Access Key Id | Secret Access Key | Region    | Server               | Language | Processor     |
+> |-----------|---------------|-------------------|-----------|----------------------|----------|---------------|
+> | 3         | ABC123        | A1B2C3D4E5F6      | us-east-1 | service.edatanow.com | en       | ./db_store.rb |
 </details>
 
 Once the config.csv is saved into the same directory as the Vagrantfile, simply call
