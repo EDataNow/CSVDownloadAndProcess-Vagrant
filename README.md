@@ -63,15 +63,17 @@ vagrant up
 ~~~
 For windows users, we have included a Start-Vagrant.bat file that can be run instead. It may also be added to the startup folder if desired.
 
-###Post-Vagrant
+<details>
+<summary>Additional Post-Vagrant Options</summary>
 
-If the VirtualBox has stopped ('vagrant halt', machine shut down, or power loss) it can be turned back on with the 'vagrant up' command. No other steps are needed, provided the local data has not been altered.
+> If the VirtualBox has stopped ('vagrant halt', machine shut down, or power loss) it can be turned back on with the 'vagrant up' command. No other steps are needed, provided the local data has not been altered.
 
-If you want to run the retrieval script outside the 30min schedule, the script can be called manually with
-~~~
-vagrant ssh
-ruby /vagrant/script/dapr.rb
-~~~
-Note: Windows users will have to use PuTTY or similar ssh service in place of the vagrant ssh call 
+> If you want to run the retrieval script outside the 30min schedule, the script can be called manually with
+> ~~~
+> vagrant ssh
+> ruby /vagrant/script/dapr.rb
+> ~~~
+> Note: Windows users will have to use PuTTY or similar ssh service in place of the vagrant ssh call 
 
-To connect to the database using Excel/PowerBI/etc from a Windows machine, you will need the [psqlODBC driver](https://www.postgresql.org/ftp/odbc/versions/msi/). 
+> To connect to the database using Excel/PowerBI/etc from a Windows machine, you will need the [psqlODBC driver](https://www.postgresql.org/ftp/odbc/versions/msi/). 
+</details>
