@@ -15,8 +15,9 @@ Once the above installations are complete, open a command line and navigate to t
  > ~~~
  > git clone --recursive https://github.com/EDataNow/DaPr-CSVDownloadAndProcessUsingVagrant.git
  > ~~~
- > This will create a folder named DaPr-CSVDownloadAndProcessUsingVagrant in the chosen directory, which you can rename if desired. Once complete, navigate into the directory and move to the next step.
+ > This will create a folder named DaPr-CSVDownloadAndProcessUsingVagrant in the chosen directory, which you can rename if desired. Once complete, navigate into the directory and move to the next step.  
 </details>
+
 <details>
  <summary>If you have already pulled the project from git</summary>
  > Navigate into the project directory (contains the Vagrantfile) and run the following commands:
