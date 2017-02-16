@@ -11,7 +11,7 @@ Creates a VM that automatically downloads Summaries and pushes the content to po
 Once the above installations are complete, open a command line and navigate to the directory in which you want the project to be installed. 
 
 <details>
- <summary> If you have not yet installed this project on your machine</summary>
+ <summary>If you have not yet installed this project on your machine</summary>
  ~~~
  git clone --recursive https://github.com/EDataNow/DaPr-CSVDownloadAndProcessUsingVagrant.git
  ~~~
