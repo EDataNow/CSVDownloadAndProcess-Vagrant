@@ -71,7 +71,7 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", path: './provisioning/postgresql.sh', args: [@config.user_name, @config.language]
-  config.vm.network "forwarded_port", guest: 5432, host: 15432
+  config.vm.network "forwarded_port", guest: 5432, host: 15432, host_id: "127.0.0.1"
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
 
