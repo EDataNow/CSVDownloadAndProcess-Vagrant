@@ -11,23 +11,28 @@ Creates a VM that automatically downloads Summaries and pushes the content to po
 Once the above installations are complete, open a command line and navigate to the directory in which you want the project to be installed. 
 
 <details>
- <summary>If you have not yet installed this project on your machine</summary>
- > ~~~
- > git clone --recursive https://github.com/EDataNow/DaPr-CSVDownloadAndProcessUsingVagrant.git
- > ~~~
- > This will create a folder named DaPr-CSVDownloadAndProcessUsingVagrant in the chosen directory, which you can rename if desired. Once complete, navigate into the directory and move to the next step.  
-</details>
-
-<details>
  <summary>If you have already pulled the project from git</summary>
- > Navigate into the project directory (contains the Vagrantfile) and run the following commands:
+ Navigate into the project directory (contains the Vagrantfile) and run the following commands:
+ 
  > ~~~
  > git submodule init
  > git submodule update
  > ~~~
- > This will update the ruby script to it's latest version.
+ 
+ This will update the ruby script to it's latest version.
 </details>
 
+<details>
+ <summary>If you have not yet installed this project on your machine</summary> 
+ 
+ > ~~~
+ > git clone --recursive https://github.com/EDataNow/DaPr-CSVDownloadAndProcessUsingVagrant.git
+ > ~~~  
+ 
+This will create a folder named DaPr-CSVDownloadAndProcessUsingVagrant in the chosen directory, which you can rename if desired. Once complete, navigate into the directory and move to the next step.  
+</details>
+
+-----
 A config.csv file must be provided containing AWS credentials, region, and language preferences. In most cases this will be provided along with the AWS credentials.
 
 <details>
