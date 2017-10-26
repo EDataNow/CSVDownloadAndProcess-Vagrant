@@ -77,6 +77,7 @@ Vagrant.configure("2") do |config|
 
     apt-get -y install curl
     apt-get -y install git
+    gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
     curl -L get.rvm.io | bash -s stable
     source /etc/profile.d/rvm.sh
     rvm install ruby-2.3.0
